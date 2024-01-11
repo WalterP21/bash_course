@@ -2,4 +2,19 @@
 - A script is simply a file that contains a series of commands. An interpreter executes commands in the script
 - Once a script is written, you'll need to actually give yourself permission to run it
     - ex. `chmod 755 script.sh`
--
+- `#!/bin/bash` will be the first line in most scripts. The `#!` is commonly referred to as 'Shebang' what follows that is the actual interpreter used to run the script. In this example, it is a bash interpreter but could also be different such as:
+    - `#!/bin.csh`
+    - `#!/bin.ksh`
+    - `#!/bin.zsh`
+- if you do not provide a shebang, the commands will be executed using your shell. This will work sometimes, but its best to be explicit
+- You can actually write scripts in an specific language. See `python_script.py` as an example (doesn't currently work as no python interpreter is intalled)
+- You can assign the output of a command to a variable. See `command_variable.sh`
+- To create a test in a script the syntax is `[ condition-to-test-for ]`
+    - `-d FILE` True if file is a directory
+    - `-e FILE` True if file exists
+    - `-f FILE` True if file exists and is a regular file
+    - `-r FILE` True if file is readable to you
+    - `-s FILE` True if file exists and it is not empty
+    - `-w FILE` True if file writable to you
+    - `-x FILE` True if file is executable by you
+- Accepting user input (STDIN): `read -p "PROMPT" VARIABLE`
