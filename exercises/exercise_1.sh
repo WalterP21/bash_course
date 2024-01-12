@@ -1,4 +1,4 @@
-#./bin/bash
+#!/bin/bash
 if [ -e /etc/shadow ]
 then
   echo "Shadow passwords are enabled"
